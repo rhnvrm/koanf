@@ -48,6 +48,7 @@ go get -u github.com/knadh/koanf/parsers/toml
 - [Custom Providers and Parsers](#custom-providers-and-parsers)
 - [Custom merge strategies](#custom-merge-strategies)
 - [List of installable Providers and Parsers](#api)
+- [Development Tips](#development-tips)
 
 ### Concepts
 
@@ -712,3 +713,17 @@ koanf is a [lightweight](https://github.com/knadh/koanf/blob/master/go.mod) alte
 - Does non-idiomatic things such as [throwing away O(1) on flat maps](https://github.com/spf13/viper/blob/3b4aca75714a37276c4b1883630bd98c02498b73/viper.go#L1524).
 - Viper treats keys that contain an empty map (eg: `my_key: {}`) as if they were not set (ie: `IsSet("my_key") == false`).
 - There are a large number of [open issues](https://github.com/spf13/viper/issues).
+
+## Development Tips
+
+### Go Workspace
+
+You can use the provided sample go.work.sample file to create your go.work file.
+
+`cp go.work.sample go.work`
+
+### Running Tests
+
+After creating the go.work file, you can run the tests with the following command:
+
+`go test -v github.com/knadh/koanf...`

@@ -2,3 +2,7 @@
 
 # IDE
 .idea
+
+# go
+go.work
+go.work.sum
