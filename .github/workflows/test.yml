@@ -23,6 +23,9 @@ jobs:
 
       - name: Run all tests
         run: go test -v github.com/knadh/koanf...
+      
+      - name: Run subfolder tests
+        run: find . -type d -not -path '*/.*' -exec sh -c 'cd {} && go test .' \;
 
       - name: Run Coverage
         run: go test -v -cover ./...

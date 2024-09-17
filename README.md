@@ -722,8 +722,14 @@ You can use the provided sample go.work.sample file to create your go.work file.
 
 `cp go.work.sample go.work`
 
-### Running Tests
+### Running Tests and Examples
 
-After creating the go.work file, you can run the tests with the following command:
+After creating the go.work file, you can run the tests and examples. 
+
+You can run the tests with the following command:
 
 `go test -v github.com/knadh/koanf...`
+
+You can run the examples with the following command:
+
+`go run examples/read-environment/main.go`
